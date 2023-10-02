@@ -1,21 +1,33 @@
 {
-  "name": "simplekanban",
+  "name": "@fairstyle/simplekanban",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a simple kanban generator",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fairstyle/Simple-KanbanTable.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fairstyle/Simple-KanbanTable/issues"
   },
   "homepage": "https://github.com/fairstyle/Simple-KanbanTable#readme",
   "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "typescript": "^5.2.2"
   }
 }
